@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Section -->
+    <section id="login-section" class="section active">
+        <div class="container">
+            <div class="login-card">
+                <div class="brand">
+                    <h1>Portal</h1>
+                    <p>Sign in to access your dashboard</p>
+                </div>
+                <form id="login-form" class="form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="remember"> Remember me
+                        </label>
+                        <a href="#" class="link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <button class="btn btn-secondary" id="demo-btn">Try Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard-section" class="section">
+        <nav class="navbar">
+            <div class="nav-brand">Portal</div>
+            <div class="nav-user">
+                <span id="user-email">user@example.com</span>
+                <button id="logout-btn" class="btn-small">Sign Out</button>
+            </div>
+        </nav>
+
+        <main class="dashboard">
+            <aside class="sidebar">
+                <ul class="nav-menu">
+                    <li class="nav-item active" data-panel="overview">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        Overview
+                    </li>
+                    <li class="nav-item" data-panel="analytics">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18 9l-5 5-4-4-3 3"></path>
+                        </svg>
+                        Analytics
+                    </li>
+                    <li class="nav-item" data-panel="settings">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v2m0 18v2m11-11h-2M3 12H1m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414m0-13.828l1.414 1.414m11.313.707l-1.414 1.414"></path>
+                        </svg>
+                        Settings
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="main-content">
+                <!-- Overview Panel -->
+                <div id="overview" class="panel active">
+                    <header class="panel-header">
+                        <h2>Dashboard Overview</h2>
+                        <p class="subtitle">Welcome back! Here's what's happening with your account.</p>
+                    </header>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value">2,453</span>
+                                <span class="stat-label">Total Users</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value">1,287</span>
+                                <span class="stat-label">Active Sessions</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon orange">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value">24h</span>
+                                <span class="stat-label">Avg. Session</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon purple">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-value">$12,450</span>
+                                <span class="stat-label">Revenue</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts-section">
+                        <div class="chart-container">
+                            <h3>User Activity</h3>
+                            <div class="chart-placeholder">
+                                <div class="bar-chart">
+                                    <div class="bar" style="--height: 60%"></div>
+                                    <div class="bar" style="--height: 80%"></div>
+                                    <div class="bar" style="--height: 45%"></div>
+                                    <div class="bar" style="--height: 90%"></div>
+                                    <div class="bar" style="--height: 70%"></div>
+                                    <div class="bar" style="--height: 85%"></div>
+                                    <div class="bar" style="--height: 55%"></div>
+                                </div>
+                                <p class="chart-label">Last 7 days</p>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Recent Activity</h3>
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <span class="activity-dot green"></span>
+                                    <div class="activity-content">
+                                        <strong>New user registered</strong>
+                                        <span class="activity-time">2 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <span class="activity-dot blue"></span>
+                                    <div class="activity-content">
+                                        <strong>Payment processed</strong>
+                                        <span class="activity-time">15 minutes ago</span>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <span class="activity-dot orange"></span>
+                                    <div class="activity-content">
+                                        <strong>Report generated</strong>
+                                        <span class="activity-time">1 hour ago</span>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <span class="activity-dot purple"></span>
+                                    <div class="activity-content">
+                                        <strong>System backup completed</strong>
+                                        <span class="activity-time">3 hours ago</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Panel -->
+                <div id="analytics" class="panel">
+                    <header class="panel-header">
+                        <h2>Analytics</h2>
+                        <p class="subtitle">Detailed metrics and insights</p>
+                    </header>
+                    <div class="empty-state">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 21H4.6A2.6 2.6 0 0 1 2 18.4V6.6C2 3.8 4.8 1 7.6 1h8.8c2.8 0 5.6 2.8 5.6 5.6v11.8c0 2.8-2.8 5.6-5.6 5.6z"></path>
+                            <path d="M10 15l2 2 4-4"></path>
+                        </svg>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Detailed analytics and reporting features would go here in a production app.</p>
+                    </div>
+                </div>
+
+                <!-- Settings Panel -->
+                <div id="settings" class="panel">
+                    <header class="panel-header">
+                        <h2>Settings</h2>
+                        <p class="subtitle">Manage your account preferences</p>
+                    </header>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label for="display-name">Display Name</label>
+                            <input type="text" id="display-name" value="Demo User">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-email">Email</label>
+                            <input type="email" id="user-email" value="user@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Notifications</label>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                                Email notifications
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                                Push notifications
+                            </label>
+                        </div>
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
